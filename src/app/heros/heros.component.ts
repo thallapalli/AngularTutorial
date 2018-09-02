@@ -16,18 +16,10 @@ export class HerosComponent implements OnInit {
   this.heroService.getHeros()
       .subscribe(heros => this.heros = heros);
 }
- 
-  selectedHero: Hero;
- 
- 
- 
- 
-  ngOnInit() {
+ngOnInit() {
   this.getHeros();
   }
  
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  
 
   }

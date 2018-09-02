@@ -12,6 +12,8 @@ this.messages.push(message);
 clear(){
 this.messages=[];
 }
-
+showMessage(){
+this.messages.push('meesage')
+}
   
 }
