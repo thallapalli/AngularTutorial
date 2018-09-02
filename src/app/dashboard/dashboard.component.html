@@ -8,3 +8,4 @@
 </div>
 <a *ngFor="let hero of heros" class="col-1-4"
     routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+    <button (click)="save()">save</button>

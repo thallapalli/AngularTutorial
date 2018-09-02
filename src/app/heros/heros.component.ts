@@ -20,6 +20,18 @@ ngOnInit() {
   this.getHeros();
   }
  
-  
+  add(name: string): void {
+  name = name.trim();
+  if (!name) { return; }
+  this.heroService.addHero({ name } as Hero)
+    .subscribe(hero => {
+      this.heros.push(hero);
+    });
+}
+
+delete(hero: Hero): void {
+  this.heros = this.heros.filter(h => h !== hero);
+  this.heroService.deleteHero(hero).subscribe();
+}
 
   }
